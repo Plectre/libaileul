@@ -1,0 +1,86 @@
+* {
+    margin:0px;
+}
+.alert-success {
+    text-align: center;
+}
+#card-img {
+    width: 100px;
+    height: 100px;
+}
+
+.weather_display {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+}
+.weather_display li {
+    text-align: justify;
+    list-style: none;
+    text-decoration: none;  
+    font-size: 1.1em;
+    padding: 1px;
+    margin-right: auto;
+}
+
+.btn-logbook {
+    width: 100%;
+    display: inline-block;
+    align-content: center;
+}
+
+.btn-logbook_add {
+    text-align: center;
+}
+
+.card-border {
+    border-radius: 1rem;
+}
+
+.navbar-nav-custom {
+    width:100%;
+    height: 100px;
+    background-color: rgba(107, 130, 128, 0.942);
+    border-radius: 0.5rem;
+}
+
+.custom-links {
+    display:flex;
+    flex:auto;
+    justify-content: space-around;
+}
+
+
+div#main-navigation {
+
+    flex-direction: row;
+    width:max-content;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: aquamarine;
+}
+
+div#main-navigation li {
+    text-align: center;
+    list-style: none;
+    text-decoration: none;  
+    padding: 20px;
+}
+
+div#main-navigation li a {
+    text-decoration: none;
+    font-size: large;
+}
+.location-content {
+    display:flex;
+    flex-wrap:wrap-reverse;
+}
+.footer {
+    width: 100%;
+    height: 50px;
+    background-color: rgba(107, 130, 128, 0.942);
+    text-align: center;
+}

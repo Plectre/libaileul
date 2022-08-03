@@ -1,0 +1,48 @@
+{% extends 'hangar/base.html' %}
+
+{% block content %}
+    <h1 style="text-align:center">Logbook de {{ user.username|capfirst }}</h1>
+    <table class="table table-bordered table-success table-striped">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Appareil</th>
+                <th>Identification</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Départ</th>
+                <th>Retour</th>
+                <th>Temps de vol</th>
+                <th>Duo</th>
+                <th>Observations</th>
+                <th>Supprimer</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+        {% for log in logs %}
+            <tr>
+                <td>{{ log.date }}</td>
+                <td>{{ log.aircraft }}</td>
+                <td>{{ log.ident }}</td>
+                <td>{{ log.from_airport }}</td>
+                <td>{{ log.to_airport }}</td>
+                <td>{{ log.start }}</td>
+                <td>{{ log.stop }}</td>
+                <td>{{ log.flyTime }}</td>
+                {% if log.duo %}
+                <td>oui</td>
+                {% else %}
+                <td>non</td>
+                {% endif %}
+                <td>{{ log.observations }}</td>
+                <td><a href="{% url 'logbook:delete' log_id=log.id %}">x</a></td>
+            </tr>
+            {% endfor%}
+        </tbody>
+    </table>
+    <div class="btn-logbook">
+        <a href="{% url 'logbook:form' %}">
+            <button class="btn btn-success btn-xl btn-logbook_add">Ajouter un log</button>
+        </a>
+    </div>
+{% endblock content %}

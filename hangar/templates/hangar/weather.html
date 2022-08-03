@@ -1,0 +1,22 @@
+{% block weather_block %}
+{% if weathers %}
+<div class="alert alert-success">
+        {% if not_connected %}
+                <h5>Pas de connection</h5>
+        {% else %}
+                <h5>Météo sur le terrain</h5>
+        {% endif %}
+<ul class="weather_display">
+        <li>Temp: {{ weathers.temperature }}°c</li>
+        <li>Pression: {{ weathers.pression }}hp</li>
+        <li>Vent: {{ weathers.wind_speed }} m/s
+        au {{ weathers.wind_direction }}°</li>
+        <li>Nuages: {{ weathers.clouds }}%</li>
+        <li>Levé du soleil : {{ weathers.sunrise }}</li>
+        <li>Couché du soleil : {{ weathers.sunset }}</li>
+{% else %}
+        <h4>Pas de données </h4>
+{% endif %}
+</ul>
+</div>
+{% endblock weather_block %}

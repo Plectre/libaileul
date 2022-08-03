@@ -1,0 +1,23 @@
+{% block navigation %}
+<nav class="navbar navbar-expand-lg">
+  <div class="navbar-nav-custom">
+    <a class="navbar-nav navbar-brand fs-2" href="{% url 'hangar:index' %}">Lib'aile'ul</a>
+
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="custom-links">
+        <a class="nav-link text-white fs-4" href="{% url 'hangar:index' %}">Hangar</a>
+        <!--<a class="nav-link text-white fs-4" href="{% url 'hangar:baptemes' %}">Baptême de l'air</a>
+          <a class="nav-link text-white fs-4" href="{% url 'hangar:ecole' %}">Ecole</a>-->
+        <a class="nav-link text-white fs-4" href="#">Contact</a>
+        {% if user.is_authenticated %}
+        <a class="nav-link text-white fs-4" href="{% url 'logbook:index' %}">Carnet de vol</a>
+        <a class="nav-link text-white fs-4" href="{% url 'location:index' %}">Location</a>
+        <a class="nav-link text-white fs-4" href="{% url 'account:logout' %}">Logout</a>
+        {% else %}
+        <a class="nav-link text-white fs-4" href="{% url 'account:login' %}">Login</a>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</nav>
+{% endblock navigation%}

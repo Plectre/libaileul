@@ -1,0 +1,2 @@
+ 
+{"coord":{"lon":-0.7797,"lat":44.7021},"weather":[{"id":800,"main":"Clear","description":"ciel dégagé","icon":"01d"}],"base":"stations","main":{"temp":19.82,"feels_like":19.71,"temp_min":18.87,"temp_max":21.71,"pressure":1015,"humidity":71},"visibility":10000,"wind":{"speed":2.06,"deg":220},"clouds":{"all":0},"dt":1658993432,"sys":{"type":2,"id":2004389,"country":"FR","sunrise":1658983473,"sunset":1659036867},"timezone":7200,"id":3022347,"name":"Croix d'Hins","cod":200}
