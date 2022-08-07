@@ -1,18 +1,23 @@
 from ast import iter_child_nodes
 from django.shortcuts import render
 from .models import Location
+import datetime
 
 def index(request):
 
     location = Location
     locations = location.objects.all()
+    les_locations = hide_past_dates(locations)
 
     context = {
-            'locations': locations,
+            'locations': les_locations,
         }
-    iter_locations(locations)
     return render(request, 'location/index.html', context)
 
-def iter_locations(locs):
+## Gestion des dates revolues pour ne pas les affichées
+def hide_past_dates(locs):
+    locations = []
     for loc in locs:
-        print(f'start-> {loc.start} : end-> {loc.end}')
+        if loc.end.date() >= datetime.date.today():
+            locations.append(loc)
+    return locations

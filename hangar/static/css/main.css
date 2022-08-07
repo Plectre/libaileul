@@ -4,9 +4,9 @@
 .alert-success {
     text-align: center;
 }
-#card-img {
-    width: 100px;
-    height: 100px;
+#detail-card-img {
+    width: 50%;
+    height: 50%;
 }
 
 .weather_display {

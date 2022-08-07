@@ -1,4 +1,5 @@
 
+from time import timezone
 from django.db import models
 
 
@@ -10,7 +11,7 @@ class LogBook(models.Model):
     ident = models.CharField(max_length=10)
     from_airport = models.CharField(max_length=200)
     to_airport = models.CharField(max_length=200)
-    start = models.CharField(max_length=20)
+    start = models.CharField(max_length=50)
     stop = models.CharField(max_length=20)
     flyTime = models.CharField(max_length=20)
     duo = models.BooleanField(default=False, blank=True)

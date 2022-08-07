@@ -8,9 +8,10 @@
     <div class="location-item">
         <div class="card m-3" style="width: 18rem;">
             <div class="card-body m-2">
-            <h5 class="card-title">{{ loc.nom }} {{ loc.prenom }}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{ loc.machine }}</h6>
-            <p class="card-text">le {{ loc.start }} au {{ loc.end }}</p>
+            <h5 class="card-title">Nom: {{ loc.nom }} <br /> Prénom: {{ loc.prenom }}</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Appareil: {{ loc.machine }}</h6>
+            <p class="card-text">Du {{ loc.start.date }} à {{ loc.start.time }}<br />
+                Au {{ loc.end.date }} à {{ loc.end.time }}</p>
             </div>
         </div>
     </div>
