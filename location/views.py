@@ -18,6 +18,9 @@ def index(request):
 def hide_past_dates(locs):
     locations = []
     for loc in locs:
-        if loc.end.date() >= datetime.date.today():
+        if datetime.date.today() > loc.end.date():
+            pass
+        else:
             locations.append(loc)
+            print (locations)
     return locations

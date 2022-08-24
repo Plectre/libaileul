@@ -2,11 +2,12 @@
 
 
 {% block content %}
-
-<form class="my_form" action="{% url 'logbook:form' %}" method="post">
-    {% csrf_token %}
-    {{  form.as_p }}
-    <input type="hidden" name='user' value="{{user.username}}">
-    <input type="submit" value="Ajouter">
-</form>
+<div class="logbook-form">
+    <form  action="{% url 'logbook:form' %}" method="post">
+        {% csrf_token %}
+        {{  form.as_p }}
+        <input type="hidden" name='user' value="{{user.username}}">
+        <input type="submit" value="Ajouter">
+    </form>
+</div>
 {% endblock content %}

@@ -1,20 +1,23 @@
 
 {% extends 'hangar/base.html' %}
+
 {% block title %}Planning des locations{% endblock %}
 {% block content %}
 <H1 style="text-align:center;">Planning des locations</H1>
 <div class="location-content">
-    {% for loc in locations %}
-    <div class="location-item">
-        <div class="card m-3" style="width: 18rem;">
-            <div class="card-body m-2">
-            <h5 class="card-title">Nom: {{ loc.nom }} <br /> Prénom: {{ loc.prenom }}</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Appareil: {{ loc.machine }}</h6>
-            <p class="card-text">Du {{ loc.start.date }} à {{ loc.start.time }}<br />
-                Au {{ loc.end.date }} à {{ loc.end.time }}</p>
-            </div>
+    {% if locations %}
+        {% for loc in locations %}
+        <div class="location-items">
+                <div class="card-body">
+                <h5 class="card-title">Nom: {{ loc.nom }} <br /> Prénom: {{ loc.prenom }}</h5>
+                <h6 class="card-subtitle">Appareil: {{ loc.machine }}</h6>
+                <p class="card-text">Du {{ loc.start.date }} à {{ loc.start.time }}<br />
+                    Au {{ loc.end.date }} à {{ loc.end.time }}</p>
+                </div>
         </div>
-    </div>
-    {% endfor %}
+        {% endfor %}
+    {% else %}
+        <h4>Pas de locations en cours !</h4>
+    {% endif %}
 </div>
-{% endblock content %}
+{% endblock %}

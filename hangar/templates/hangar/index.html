@@ -1,29 +1,31 @@
-{% extends 'hangar/base.html' %}
 
+{% extends 'hangar/base.html' %}
 {% load static %}
 {% block title %} Hangar {% endblock %}
+
+
 {% block content %}
 {% include 'hangar/weather.html' %}
-{% block weather_block %}{% endblock weather_block %}
-{% if messages %}
-    {% for message in messages %}
-        <div class="alert alert-success">
-            {{  message }}
+    {% if messages %}
+        {% for message in messages %}
+        <div class="alert">
+            {{ message }}
         </div>
-    {% endfor %}
-{% endif %}
-<div class="row justify-content-md-center">
-    {% for article in articles %}
-    <div class="card-border" style="width: 100%;">
-        <div class="card shadow-sm p-3 mb-1 bg-body rounded">
-            <h4 ><a href="detail/{{article.id}}"
-                class="card-title m-1">{{ article.title }}</a></h4>
-                <div id='card-imge'>
-                    <img src='{{ article.image.url }}' alt="image {{article.title}}" class="card-img-top">
-                </div>
-                <h5 class="card-body custom-card m-3">{{ article.content | truncatechars:100}}</h5>
+        {% endfor %}
+    {% endif %}
+
+        {% for article in articles %}
+        <div class="card">
+            <div class="card-title">
+                <h4><a href="detail/{{article.id}}">{{ article.title }}</a></h4>
+            </div>
+            <div class="card-image">
+                <img src='{{ article.image.url }}' alt="image {{article.title}}">
+            </div>
+            <div class="card-content">
+                <h5>{{ article.content | truncatechars:100}}</h5>
             </div>
         </div>
-    {% endfor %}
-    </div>
-{% endblock %}
+
+        {% endfor %}
+        {% endblock %}

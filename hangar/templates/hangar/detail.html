@@ -3,13 +3,11 @@
 {% block content %}
 
 
-<div class="card-border">
-    <div class="card shadow-sm p-3 mb-1 bg-body rounded">
-        <div id='detail-card-img'>
-            <img src='{{ details.image.url }}' alt="image {{details.title}}" class="card-img-top">
-        </div>
-        <h4 class="card-title m-2">{{ details.title }}</h4>
-        <h5 class="card-content p-1">{{ details.content }}</h5>
+<div class="details-card">
+    <div class="details-card-img">
+        <img src='{{ details.image.url }}' alt="image {{details.title}}">
     </div>
+    <h4 class="details-card-title">{{ details.title }}</h4>
+    <h5 class="details-card-content">{{ details.content }}</h5>
 </div>
 {% endblock content %}
