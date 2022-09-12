@@ -24,7 +24,7 @@
 }
 
 .baniere-title {
-    font-size: 2em;
+    font-size: 4rem;
     text-decoration: none;
     color: cadetblue;
     margin: 1em;
@@ -246,10 +246,11 @@
     .baniere {
         height: 600px;
     }
+
     .baniere-title {
-        font-size: 9rem;
+        font-size: 6rem;
     }
-    
+
     .navbar-links {
     }
     .main-content {
