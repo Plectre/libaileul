@@ -1,19 +1,15 @@
 {% load static %}
 
-
-  <div class="navbar">
-    <a class="navbar-title" href="{% url 'hangar:index' %}">Lib'aile'ul</a>
-    <div class="navbar-links">
-      <a href="{% url 'hangar:index' %}">Hangar</a>
-      <!--<a class="nav-link text-white fs-4" href="{% url 'hangar:baptemes' %}">Baptême de l'air</a>
-        <a class="nav-link text-white fs-4" href="{% url 'hangar:ecole' %}">Ecole</a>-->
-        <a href="#">Contact</a>
-        {% if user.is_authenticated %}
-        <a  href="{% url 'logbook:index' %}">Carnet de vol</a>
-        <a  href="{% url 'location:index' %}">Location</a>
-        <a  href="{% url 'account:logout' %}">Logout</a>
-        {% else %}
-        <a  href="{% url 'account:login' %}">Login</a>
-        {% endif %}
-      </div>
-  </div>
+<div class="navbar-links">
+  <a href="{% url 'hangar:index' %}">Hangar</a>
+  <!--<a class="nav-link text-white fs-4" href="{% url 'hangar:baptemes' %}">Baptême de l'air</a>
+    <a class="nav-link text-white fs-4" href="{% url 'hangar:ecole' %}">Ecole</a>-->
+    <a href="#">Contact</a>
+    {% if user.is_authenticated %}
+    <a  href="{% url 'logbook:index' %}">Carnet de vol</a>
+    <a  href="{% url 'location:index' %}">Location</a>
+    <a  href="{% url 'account:logout' %}">Logout</a>
+    {% else %}
+    <a  href="{% url 'account:login' %}">Login</a>
+    {% endif %}
+</div>
