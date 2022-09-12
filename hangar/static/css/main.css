@@ -16,7 +16,7 @@
 }
 
 .baniere {
-    height: 600px;
+    height: 200px;
     display: flex;
     flex-direction: column;
     background: url('./img/BG.jpg');
@@ -24,7 +24,7 @@
 }
 
 .baniere-title {
-    font-size: 9em;
+    font-size: 2em;
     text-decoration: none;
     color: cadetblue;
     margin: 1em;
@@ -228,7 +228,7 @@
     align-items: center;
 }
 
-/* En dessus de 350px*/
+/* ========================== En dessus de 350px ======================================*/
 @media only screen and (min-width: 350px) {
     :root {
         font-size: 0.9em;
@@ -237,18 +237,19 @@
 
 
 
-/* En dessus de 800px */
+/* ============================= En dessus de 800px ==================================*/
 @media only screen and (min-width: 800px) {
     :root {
         font-size: 1.2em;
     }
-    .navbar-title {
-        font-size: 2.5em;
-        text-decoration: none;
-        margin: 1.5em;
-        color:white;
-    }
 
+    .baniere {
+        height: 600px;
+    }
+    .baniere-title {
+        font-size: 9rem;
+    }
+    
     .navbar-links {
     }
     .main-content {
