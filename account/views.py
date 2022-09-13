@@ -12,7 +12,7 @@ def user_login(request):
         user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
-            messages.add_message(request, messages.INFO, f"Bienvenue {user.username}")
+            messages.add_message(request, messages.INFO, f"Salutations {user.username}")
             return redirect('hangar:index')
         else:
             messages.error(request, 'Username or password not matches !')
