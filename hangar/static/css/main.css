@@ -18,7 +18,7 @@
 .baniere {
     display: flex;
     flex-direction: column;
-    height: 180px;
+    height: 200px;
     background: url('./img/BG.jpg');
     background-repeat: no-repeat;
 }
