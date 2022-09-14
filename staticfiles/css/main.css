@@ -24,16 +24,19 @@
 
 .baniere-title {
     font-size: 6rem;
-    text-decoration: none;
-    color: cadetblue;
+    text-decoration: underline;
+    color: azure;
     margin: auto;
     text-align: center;
 }
 
 .navbar-links {
     display: flex;
+    /* flex-direction: row; */
+    /* justify-content: center; */
     text-align: center;
     margin-bottom: 2em;
+    /* align-content: space-evenly; */
     background-color: cadetblue;
 }
 
@@ -44,7 +47,7 @@
     font-size: 1.2rem;
     padding: 0.5em 0.2em;
     text-decoration: none;
-    color: whitesmoke;
+    color: azure;
 }
 
 .main-content {
@@ -56,12 +59,26 @@
 .alert {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     font-size: 1.3rem;
     height: 2rem;
     padding: 0.2rem;
     align-items: center;
-    background-color: aquamarine;
+    color: black;
+    background-color: rgba(95, 158, 160, 0.3);
+    /*animation: name duration timing-function delay iteration-count direction fill-mode;*/
+    animation: scaling 2s;
 }
+
+@keyframes scaling {
+    from {
+        scale: 50%;
+    }
+    to {
+        scale: 100%;
+    }
+}
+
 .alert-success {
     text-align: center;
 }
@@ -69,8 +86,6 @@
 .details-card-img img{
     width: 100%;
 }
-
-
 /* Weather */
 .weather-display {
     display:flex;
@@ -96,6 +111,14 @@
     display: flex;
     flex-direction: column;
 }
+/*.weather-display-items ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+}*/
 
 .weather-display li {
 
@@ -218,6 +241,7 @@
     background-color: rgba(107, 130, 128, 0.942);
     justify-content: center;
     align-items: center;
+    margin-top: 100px;
 }
 
 /* ============================= En dessus de 1000px ==================================*/
