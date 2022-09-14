@@ -1,0 +1,285 @@
+:root {
+    font-size: 15px;
+}
+
+* {
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+.container {
+    display:flex;
+    width: 100vw;
+    flex-direction: column;
+    height:max-content;
+}
+
+.baniere {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    background: url('./img/BG.jpg') no-repeat center;
+}
+
+.baniere-title {
+    font-size: 6rem;
+    text-decoration: none;
+    color: cadetblue;
+    margin: auto;
+    text-align: center;
+}
+
+.navbar-links {
+    display: flex;
+    /* flex-direction: row; */
+    /* justify-content: center; */
+    text-align: center;
+    margin-bottom: 2em;
+    /* align-content: space-evenly; */
+    background-color: cadetblue;
+}
+
+.navbar-links a {
+    display: flex;
+    flex: auto;
+    justify-content: space-evenly;
+    font-size: 1.2rem;
+    padding: 0.5em 0.2em;
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    overflow:auto; 
+}
+.alert {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    height: 2rem;
+    padding: 0.2rem;
+    align-items: center;
+    background-color: aquamarine;
+}
+.alert-success {
+    text-align: center;
+}
+
+.details-card-img img{
+    width: 100%;
+}
+/* Weather */
+.weather-display {
+    display:flex;
+    flex-direction:row;
+    align-items: center;
+    margin: 60px 20px 60px 20px;
+    padding: 20px 10px 20px 10px;
+    background-color: aliceblue;
+    box-shadow: 2px 2px 1em 0.2em rgb(107 130 128 / 80%);
+}
+
+.weather-display-title {
+    font-size: 2em;
+    padding: 20px;
+    color:gray;
+}
+
+.weather-display-items {
+    padding: 1em;
+}
+
+.weather-display-items ul{
+    display: flex;
+    flex-direction: column;
+}
+/*.weather-display-items ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    font-size: 1.2rem;
+    flex-wrap: wrap;
+}*/
+
+.weather-display li {
+
+    list-style: none;
+    font-size: 1.5rem;
+    padding-right: 25px;
+}
+
+/* LOGBOOK */
+.logbook-title {
+    overflow-x: overlay;
+}
+
+.logbook-table table {
+    margin-top:2em;
+    margin-bottom: 2em;
+    border-collapse: collapse;
+}
+.logbook-table caption {
+    padding: 1em;
+}
+
+.logbook-table thead, th{
+    padding: 0.2em;
+    border: 1px solid black;
+    text-align: center;
+    background-color: rgba(107, 130, 128, 0.50);
+    color:whitesmoke;
+}
+
+.logbook-table td {
+    font-size: smaller;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid black;
+    padding: 3px;
+}
+
+.logbook-btn-add {
+    display: flex;
+}
+
+.logbook-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.logbook-form form {
+        display: flex;
+        flex-direction: column;
+        margin: 20px;
+        /* place-items: flex-end; */
+        align-items: end;
+        background-color: cadetblue;
+        padding: 20px;
+        box-shadow: 2px 2px 1em 0.2em rgb(107 130 128 / 80%);
+}
+
+.logbook-form label {
+    text-align: center;
+}
+
+.logbook-form input {
+    color:rgba(107, 130, 128, 0.50);
+    align-items: center;
+}
+
+.logbook tr:nth-child(odd) {
+    background-color: rgba(107, 130, 128, 0.450);
+}
+/* CARD */
+.card {
+    width: inherit;
+}
+.card-title a {
+    text-decoration: none;
+    font-size: 2em;
+    padding: 0px 1em;
+}
+.card-content {
+    font-size: 1.5em;
+}
+.card-image img{
+        width: -webkit-fill-available;
+}
+
+/* LOCATION */
+.location-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-title {
+    padding-top: 0.5em;
+    padding-bottom: 0.5em ;
+    font-size: 1em;
+}
+.card-body {
+    width: 100vw;
+    text-align: center;
+    padding-bottom: 0.5em;
+    box-shadow: 2px 2px 1em 0.2em rgb(107 130 128 / 80%);
+}
+.card-subtitle {
+    font-size: 1em;
+    color:gray;
+    padding-bottom: 0.5em;
+}
+.location-items {
+    display: flex;
+    padding: 1em;
+    width: 100vw;
+}
+
+.footer {
+    display: flex;
+    height: 100px;
+    width: 100vw;
+    background-color: rgba(107, 130, 128, 0.942);
+    justify-content: center;
+    align-items: center;
+}
+
+/* ============================= En dessus de 1000px ==================================*/
+@media only screen and (min-width: 1000px) {
+
+    :root {
+        font-size: 1.5rem;
+    }
+
+    .baniere {
+        height: 600px;
+    }
+
+    .baniere-title {
+        font-size: 8rem;
+    }
+
+    .weather-display {
+        flex-direction: column;
+    }
+
+    .weather-display-items ul {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        font-size: 1rem;
+    }
+
+    .main-content {
+        display: flex;
+        flex-direction: column;
+        width: 90vw;
+        align-self: center;
+    }
+
+    .logbook-table {
+        width: 90vw;
+        display: flex;
+        flex-direction: column;
+    }
+    .logbook-table table {
+        font-size: 1em;
+    }
+
+    .location-items {
+        width: 50%;
+    }
+}
+
+/* ============================= En dessus de 2000px ==================================*/
+@media only screen and (min-width: 2000px) {
+    :root {
+        font-size: 2rem;
+    }
+}
