@@ -297,7 +297,6 @@ table {
     border: 1px solid;
     padding: 27px;
     margin: auto;
-    width: 50%;
 }
 
 .login-form input {
@@ -366,6 +365,10 @@ table {
 
     .location-items {
         width: 50%;
+    }
+
+    .login-form {
+        width: 75%;
     }
 }
 
