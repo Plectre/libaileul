@@ -76,7 +76,7 @@ table {
 }
 
 .baniere-title {
-    font-size: 6rem;
+    font-size: 5rem;
     text-decoration: underline;
     color: azure;
     margin: auto;
@@ -85,8 +85,7 @@ table {
 
 .navbar-links {
     display: flex;
-    /* flex-direction: row; */
-    /* justify-content: center; */
+    flex-direction: row;
     text-align: center;
     margin-bottom: 2em;
     /* align-content: space-evenly; */
@@ -136,9 +135,6 @@ table {
     text-align: center;
 }
 
-.details-card-img img{
-    width: 100%;
-}
 /* Weather */
 .weather-display {
     display:flex;
@@ -236,8 +232,13 @@ table {
 }
 /* CARD */
 .card {
-    width: inherit;
+    width: 100vw;
 }
+
+.details-card-img img{
+    width: 100%;
+}
+
 .card-title a {
     text-decoration: none;
     font-size: 2em;
@@ -247,14 +248,7 @@ table {
     font-size: 1.5em;
 }
 .card-image img{
-        width: -webkit-fill-available;
-}
-
-/* LOCATION */
-.location-content {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+        width: 100vw;
 }
 
 .card-title {
@@ -273,6 +267,14 @@ table {
     color:gray;
     padding-bottom: 0.5em;
 }
+
+/* LOCATION */
+.location-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
 .location-items {
     display: flex;
     padding: 1em;
