@@ -25,17 +25,10 @@ def detail(request, id):
 def ecole(request):
     return render(request, 'hangar/ecole.html')
 
-def baptemes(request):
-    articles = Articles
-    article = articles.objects.get(title="Les baptêmes de l’air")
-    context = {
-        'article': article,
-    }
-    return render(request, 'hangar/baptemes.html', context)
-
 def weather(request):
     print("appel display weather")
     weather = get_weather()
-
-    print(weather)
-    return render(request, 'hangar/weather.html', {"weather": weather})
+    if weather:
+        return render(request, 'hangar/weather.html', {"weather": weather})
+    else:
+        return render(request, 'hangar/weather.html')

@@ -2,7 +2,7 @@
 {% extends 'hangar/base.html' %}
 {% block content %}
 {% if messages %}
-<div class="alert alert-warning">
+<div class="red-alert">
     {% for message in messages %}
         {{ message }}
     {% endfor %}

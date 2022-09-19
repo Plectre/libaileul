@@ -2,8 +2,7 @@
 
 <div class="navbar-links">
   <a href="{% url 'hangar:index' %}">Hangar</a>
-  <!--<a class="nav-link text-white fs-4" href="{% url 'hangar:baptemes' %}">Baptême de l'air</a>
-    <a class="nav-link text-white fs-4" href="{% url 'hangar:ecole' %}">Ecole</a>-->
+ 
     <a href="#">Contact</a>
     {% if user.is_authenticated %}
     <a  href="{% url 'logbook:index' %}">Carnet de vol</a>

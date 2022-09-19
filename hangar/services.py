@@ -33,9 +33,9 @@ def get_weather():
         if weather_data.status_code == 200:
             w = json.loads(weather_data.content)
             result = format_result(w)
+            return result
         else:
             return result
-    return result
 
 
 
@@ -48,7 +48,10 @@ def convert_time(t):
 def format_result(w):
     sunrise = convert_time(w['sys']['sunrise'])
     sunset = convert_time(w['sys']['sunset'])
+    dt = convert_time(w['dt'])
+
     result = {
+                'heure': str(dt),
                 'temperature': w['main']['temp'],
                 'pression': w['main']['pressure'],
                 'wind_speed': w['wind']['speed'],

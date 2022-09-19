@@ -1,27 +1,28 @@
 {% block weather_block %}
 {% if weathers %}
-
 <div class="weather-display">
         <div class="weather-display-title">
-        {% if not_connected %}
-        <h4>Pas de connection</h4>
-        {% else %}
-        <h4>Météo sur le terrain</h4>
-        {% endif %}
+                {% if not_connected %}
+                <h4>Pas de connection</h4>
+                {% else %}
+                <h4>Météo sur le terrain à {{ weathers.heure }}</h4>
+                {% endif %}
         </div>
         <div class="weather-display-items">
-        <ul>
-                <li>Pression:{{ weathers.pression }}hp</li>
-                <li>Temp:{{ weathers.temperature }}°c</li>
-                <li>Vent:{{ weathers.wind_speed }}m/s
-                 au{{ weathers.wind_direction }}°</li>
-                <li>Nuages:{{ weathers.clouds }}%</li>
-                <li>Levé du soleil :{{ weathers.sunrise }}</li>
-                <li>Couché du soleil: {{ weathers.sunset }}</li>
-        </ul>
+                <ul>
+                        <li>Pression: {{ weathers.pression }}hp</li>
+                        <li>Temp: {{ weathers.temperature }}°c</li>
+                        <li>Vent: {{ weathers.wind_speed }}m/s
+                                au {{ weathers.wind_direction }}°</li>
+                        <li>Nuages: {{ weathers.clouds }}%</li>
+                        <li>Levé du soleil: {{ weathers.sunrise }}</li>
+                        <li>Couché du soleil: {{ weathers.sunset }}</li>
+                </ul>
         </div>
         {% else %}
-        <h4>Pas de données </h4>
+        <div class="red-alert">
+                <h4>Pas de données mètèo, vèrifiez votre connexion !</h4>
+        </div>
         {% endif %}
 </div>
 {% endblock weather_block %}
