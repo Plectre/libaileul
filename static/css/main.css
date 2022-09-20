@@ -3,48 +3,135 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
 }
+
 body {
-	line-height: 1;
+    line-height: 1;
 }
-ol, ul {
-	list-style: none;
+
+ol,
+ul {
+    list-style: none;
 }
-blockquote, q {
-	quotes: none;
+
+blockquote,
+q {
+    quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
 }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+    border-collapse: collapse;
+    border-spacing: 0;
 }
 
 
@@ -53,19 +140,20 @@ table {
 
 :root {
     font-size: 15px;
+    font-family: 'Roboto', sans-serif;
 }
 
 * {
     margin: 0;
-    padding:0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 .container {
-    display:flex;
+    display: flex;
     width: 100vw;
     flex-direction: column;
-    height:max-content;
+    height: max-content;
 }
 
 .baniere {
@@ -83,7 +171,7 @@ table {
 }
 
 .baniere-title a {
-    font-size: 6rem;
+    font-size: 5rem;
     color: whitesmoke;
 }
 
@@ -124,12 +212,17 @@ table {
     flex-direction: column;
     justify-content: center;
     font-size: 1.3rem;
-    height: 2rem;
+    width: 66vw;
+    height: 3rem;
     padding: 0.2rem;
+    margin-bottom: 10px;
     align-items: center;
     color: black;
-    background-color: rgba(95, 158, 160, 0.3);
+    border-radius: 12px;
+    background-color: rgba(19, 233, 61, 0.437);
     animation: scaling 2s;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .red-alert {
@@ -137,19 +230,24 @@ table {
     flex-direction: column;
     justify-content: center;
     font-size: 1.3rem;
-    height: 2rem;
+    width: 66vw;
+    height: 3rem;
     padding: 0.2rem;
     margin-bottom: 10px;
     align-items: center;
     color: black;
+    border-radius: 12px;
     background-color: rgba(251, 12, 8, 0.3);
     animation: scaling 2s;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @keyframes scaling {
     from {
         scale: 50%;
     }
+
     to {
         scale: 100%;
     }
@@ -161,8 +259,8 @@ table {
 
 /* Weather */
 .weather-display {
-    display:flex;
-    flex-direction:column;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     margin: 20px 20px 60px 20px;
     padding: 6px 6px 6px 6px;
@@ -173,14 +271,14 @@ table {
 .weather-display-title {
     font-size: 2em;
     padding: 20px;
-    color:gray;
+    color: gray;
 }
 
 .weather-display-items {
     padding: 1em;
 }
 
-.weather-display-items ul{
+.weather-display-items ul {
     display: flex;
     flex-direction: column;
 }
@@ -193,25 +291,39 @@ table {
 }
 
 /* LOGBOOK */
+
+.logbook {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logbook-table {
+    width: 80vw;
+    overflow: auto;
+}
+
 .logbook-title {
     overflow-x: overlay;
 }
 
 .logbook-table table {
-    margin-top:2em;
+    margin-top: 2em;
     margin-bottom: 2em;
     border-collapse: collapse;
 }
+
 .logbook-table caption {
     padding: 1em;
 }
 
-.logbook-table thead, th{
+.logbook-table thead,
+th {
     padding: 0.2em;
     border: 1px solid black;
     text-align: center;
     background-color: rgba(107, 130, 128, 0.50);
-    color:whitesmoke;
+    color: whitesmoke;
 }
 
 .logbook-table td {
@@ -231,15 +343,16 @@ table {
     flex-direction: column;
     align-items: center;
 }
+
 .logbook-form form {
-        display: flex;
-        flex-direction: column;
-        margin: 20px;
-        /* place-items: flex-end; */
-        align-items: end;
-        background-color: cadetblue;
-        padding: 20px;
-        box-shadow: 2px 2px 1em 0.2em rgb(107 130 128 / 80%);
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    /* place-items: flex-end; */
+    align-items: end;
+    background-color: cadetblue;
+    padding: 20px;
+    box-shadow: 2px 2px 1em 0.2em rgb(107 130 128 / 80%);
 }
 
 .logbook-form label {
@@ -247,13 +360,14 @@ table {
 }
 
 .logbook-form input {
-    color:rgba(107, 130, 128, 0.50);
+    color: rgba(107, 130, 128, 0.50);
     align-items: center;
 }
 
 .logbook tr:nth-child(odd) {
     background-color: rgba(107, 130, 128, 0.450);
 }
+
 /* CARD */
 .cards {}
 
@@ -261,7 +375,7 @@ table {
     overflow: hidden;
 }
 
-.details-card-img img{
+.details-card-img img {
     width: 100%;
 }
 
@@ -270,27 +384,31 @@ table {
     font-size: 2em;
     padding: 0px 1em;
 }
+
 .card-content {
     font-size: 1.5em;
 }
-.card-image img{
-        width: 100vw;
+
+.card-image img {
+    width: 100vw;
 }
 
 .card-title {
     padding-top: 0.5em;
-    padding-bottom: 0.5em ;
+    padding-bottom: 0.5em;
     font-size: 1em;
 }
+
 .card-body {
     width: 100vw;
     text-align: center;
     padding-bottom: 0.5em;
     box-shadow: 2px 2px 1em 0.2em rgb(107 130 128 / 80%);
 }
+
 .card-subtitle {
     font-size: 1em;
-    color:gray;
+    color: gray;
     padding-bottom: 0.5em;
 }
 
@@ -304,7 +422,7 @@ table {
 .location-items {
     display: flex;
     padding: 1em;
-    width: 100vw;
+    width: 80vw;
 }
 
 .footer {
@@ -316,6 +434,7 @@ table {
     align-items: center;
     margin-top: 100px;
 }
+
 /*====== LOGIN ==========*/
 
 .login-form {
@@ -349,37 +468,11 @@ table {
     cursor: pointer;
 }
 
-/* ============================= En dessous de 400px ==================================*/
-@media only screen and (max-width: 200px) {
-    :root {
-        font-size: 0.8rem;
-    }
-
-    .weather-display {
-        margin: 20px;
-    }
-
-    .weather-display li {
-        list-style: none;
-        font-size: 1.5rem;
-        padding-right: 25px;
-    }
-
-    .weather-display-title {
-        font-size: 1.8rem;
-        padding: 5px;
-        color: gray;
-    }
-}
-/* ============================= En dessus de 1000px ==================================*/
-@media only screen and (min-width: 1000px) {
-
-    :root {
-        font-size: 1.3rem;
-    }
+/* ============================= En dessus de 800px ==================================*/
+@media only screen and (min-width: 800px) {
 
     .baniere {
-        height: 800px;
+        height: 500px;
     }
 
     .baniere-title {
@@ -398,25 +491,13 @@ table {
         font-size: 1rem;
     }
 
-    .main-content {
+    .logbook-table {
         display: flex;
         flex-direction: column;
-        width: 90vw;
-        align-self: center;
-        overflow: hidden;
     }
 
-    .logbook-table {
-        width: 90vw;
-        display: flex;
-        flex-direction: column;
-    }
     .logbook-table table {
         font-size: 1.4em;
-    }
-
-    .location-items {
-        width: 50%;
     }
 
     .login-form {
@@ -424,12 +505,13 @@ table {
     }
 }
 
+/*======== Au dessous de 500px ====================*/
+@media only screen and (max-width: 500px) {
 
-
-
-/* ============================= En dessus de 2000px ==================================*/
-@media only screen and (min-width: 2000px) {
-    :root {
-        font-size: 2rem;
+    .baniere {
+        height: 150px;
     }
 }
+
+/* ============================= En dessus de 1920px ==================================*/
+@media only screen and (min-width: 1900px) {}

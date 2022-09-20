@@ -4,6 +4,7 @@
 {% block title %}Planning des locations{% endblock %}
 {% block content %}
 <H1 style="text-align:center;">Planning des locations</H1>
+<div class="main-content">
 <div class="location-content">
     {% if locations %}
         {% for loc in locations %}
@@ -19,5 +20,6 @@
     {% else %}
         <h4>Pas de locations en cours !</h4>
     {% endif %}
+</div>
 </div>
 {% endblock %}

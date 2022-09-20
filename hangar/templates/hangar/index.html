@@ -1,32 +1,31 @@
-
 {% extends 'hangar/base.html' %}
 {% load static %}
 {% block title %} Hangar {% endblock %}
-
-
 {% block content %}
 {% if messages %}
-    {% for message in messages %}
-    <div class="green-alert">
-        {{ message }}
-    </div>
-    {% endfor %}
+{% for message in messages %}
+<div class="green-alert">
+    {{ message }}
+</div>
+{% endfor %}
 {% endif %}
 
-<div class="cards">
+
 {% include 'hangar/weather.html' %}
-        {% for article in articles %}
-            <div class="card">
-                <div class="card-title">
-                    <h4><a href="detail/{{article.id}}">{{ article.title }}</a></h4>
-                </div>
-                <div class="card-image">
-                    <img src='{{ article.image.url }}' alt="image {{article.title}}">
-                </div>
-                <div class="card-content">
-                    <h5>{{ article.content | truncatechars:100}}</h5>
-                </div>
-            </div>
-            {% endfor %}
+<div class="main-content">
+    {% for article in articles %}
+    <div class="card">
+        <div class="card-title">
+            <h4><a href="detail/{{article.id}}">{{ article.title }}</a></h4>
+        </div>
+        <div class="card-image">
+            <img src='{{ article.image.url }}' alt="image {{article.title}}">
+        </div>
+        <div class="card-content">
+            <h5>{{ article.content | truncatechars:100}}</h5>
+        </div>
+    </div>
+    {% endfor %}
 </div>
-        {% endblock %}
+
+    {% endblock content%}
