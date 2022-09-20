@@ -284,10 +284,9 @@ table {
 }
 
 .weather-display li {
-
     list-style: none;
-    font-size: 1rem;
-    padding-right: 25px;
+    font-size: 20px;
+    padding-right: 20px;
 }
 
 /* LOGBOOK */
@@ -471,6 +470,10 @@ th {
 /* ============================= En dessus de 800px ==================================*/
 @media only screen and (min-width: 800px) {
 
+
+    .main-content {
+        width: 95vw;
+    }
     .baniere {
         height: 500px;
     }
@@ -478,7 +481,9 @@ th {
     .baniere-title {
         font-size: 8rem;
     }
-
+    .navbar-links a {
+        font-size: 2rem;
+    }
     .weather-display {
         flex-direction: column;
     }
@@ -488,9 +493,11 @@ th {
         justify-content: center;
         flex-direction: row;
         flex-wrap: wrap;
-        font-size: 1rem;
+        font-size: 20px;
     }
-
+    .weather-display li {
+        font-size: 30px;
+    }
     .logbook-table {
         display: flex;
         flex-direction: column;
