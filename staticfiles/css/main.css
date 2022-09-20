@@ -313,6 +313,7 @@ table {
 }
 
 .logbook-table caption {
+    font-size: 25px;
     padding: 1em;
 }
 
@@ -420,7 +421,8 @@ th {
 
 .location-items {
     display: flex;
-    padding: 1em;
+    padding: 1.2em;
+    font-size: 1.2rem;
     width: 80vw;
 }
 
@@ -502,7 +504,10 @@ th {
         display: flex;
         flex-direction: column;
     }
-
+    .logbook-table caption {
+        font-size: 45px;
+        text-align: center;
+    }
     .logbook-table table {
         font-size: 1.4em;
     }
