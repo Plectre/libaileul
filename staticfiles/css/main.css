@@ -314,7 +314,7 @@ table {
 
 .logbook-table caption {
     font-size: 25px;
-    padding: 1em;
+    padding-bottom: 0.7em;
 }
 
 .logbook-table thead,
@@ -337,7 +337,13 @@ th {
 .logbook-btn-add {
     display: flex;
 }
-
+.logbook-btn-add button {
+    padding: 10px 20px;
+    background-color: cadetblue;
+    border: none;
+    color: white;
+    border-radius: 5px;
+}
 .logbook-form {
     display: flex;
     flex-direction: column;
@@ -410,6 +416,14 @@ th {
     font-size: 1em;
     color: gray;
     padding-bottom: 0.5em;
+}
+.btn-about input{
+    width: 200px;
+    height: 50px;
+    background-color: cadetblue;
+    opacity: 70%;
+    border: 0px;
+    border-radius: 10px;
 }
 
 /* LOCATION */

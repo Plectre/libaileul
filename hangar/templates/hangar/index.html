@@ -24,6 +24,11 @@
         <div class="card-content">
             <h5>{{ article.content | truncatechars:100}}</h5>
         </div>
+        <div class="btn-about">
+            <a href="detail/{{ article.id }}">
+            <input type="submit" value="En savoir plus..."/>
+            </a>
+        </div>
     </div>
     {% endfor %}
 </div>
