@@ -262,10 +262,13 @@ table {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px 20px 60px 20px;
+    width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
     padding: 6px 6px 6px 6px;
     background-color: aliceblue;
     box-shadow: 2px 2px 1em 0.2em rgb(107 130 128 / 80%);
+    border-radius: 10px;
 }
 
 .weather-display-title {
@@ -284,11 +287,39 @@ table {
 }
 
 .weather-display li {
-    list-style: none;
-    font-size: 20px;
-    padding-right: 20px;
+    padding: 10px;
+    font-size: 1.6rem;
+    background-color: cadetblue;
+    color: white;
+    margin: 2px;
+    opacity: 85%;
+    border-radius: 10px;
 }
-
+.weather-display-by {
+    margin-left: auto;
+    opacity: 35%;
+    font-size: smaller;
+    padding: 5px;
+}
+/*====== Font Awsome =======================*/
+.fa-trash-can {
+    color: black;
+}
+.fa-gauge-high {
+    padding-right: 5px;
+}
+.fa-temperature-low {
+    padding-right: 5px;
+}
+.fa-cloud {
+    padding-right: 5px;
+}
+.fa-sun {
+    padding-right: 5px;
+}
+.fa-moon {
+    padding-right: 5px;
+}
 /* LOGBOOK */
 
 .logbook {
@@ -512,8 +543,15 @@ th {
         font-size: 20px;
     }
     .weather-display li {
-        font-size: 30px;
+        padding: 10px;
+        font-size: 1.6rem;
+        background-color: cadetblue;
+        color: white;
+        margin: 11px;
+        opacity: 85%;
+        border-radius: 10px;
     }
+
     .logbook-table {
         display: flex;
         flex-direction: column;

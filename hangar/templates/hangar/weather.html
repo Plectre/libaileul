@@ -5,19 +5,22 @@
                 {% if not_connected %}
                 <h4>Pas de connection</h4>
                 {% else %}
-                <h4>Météo sur le terrain à {{ weathers.heure }}</h4>
+                <h4>Météo base à {{ weathers.heure }}</h4>
                 {% endif %}
         </div>
         <div class="weather-display-items">
                 <ul>
-                        <li>Pression: {{ weathers.pression }}hp</li>
-                        <li>Temp: {{ weathers.temperature }}°c</li>
-                        <li>Vent: {{ weathers.wind_speed }}m/s
-                                au {{ weathers.wind_direction }}°</li>
-                        <li>Nuages: {{ weathers.clouds }}%</li>
-                        <li>Levé du soleil: {{ weathers.sunrise }}</li>
-                        <li>Couché du soleil: {{ weathers.sunset }}</li>
+                        <li><i class="fa fa-solid fa-gauge-high"></i>  {{ weathers.pression }}hp</li>
+                        <li><i class="fa fa-solid fa-temperature-low"></i> {{ weathers.temperature }}°c</li>
+                        <li><i class="fa fa-wind"></i>  {{ weathers.wind_speed }}m/s
+                        <i class="fa-solid fa-compass"></i>   {{ weathers.wind_direction }}°</li>
+                        <li><i class="fa fa-ligth fa-cloud"></i>    {{ weathers.clouds }}%</li>
+                        <li><i class="fa-regular fa-sun"></i>   {{ weathers.sunrise }}</li>
+                        <li><i class="fa-regular fa-moon"></i>  {{ weathers.sunset }}</li>
                 </ul>
+        </div>
+        <div class="weather-display-by">
+                <h6>By OpenWeather</h6>
         </div>
         {% else %}
         <div class="red-alert">
