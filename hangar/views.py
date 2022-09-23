@@ -32,3 +32,7 @@ def weather(request):
         return render(request, 'hangar/weather.html', {"weather": weather})
     else:
         return render(request, 'hangar/weather.html')
+
+
+def map(request):
+    return(request, 'hangar/map.html')

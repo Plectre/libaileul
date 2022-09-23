@@ -1,6 +1,7 @@
 {% extends 'hangar/base.html' %}
 {% load static %}
 {% block title %} Hangar {% endblock %}
+
 {% block content %}
 {% if messages %}
 {% for message in messages %}
@@ -31,6 +32,6 @@
         </div>
     </div>
     {% endfor %}
+    {% include 'hangar/map.html' %}
 </div>
-
     {% endblock content%}

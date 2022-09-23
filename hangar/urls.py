@@ -9,5 +9,6 @@ urlpatterns = [
     path('ecole/', views.ecole, name='ecole'),
     #path('baptemes/', views.baptemes, name='baptemes'),
     path('detail/<int:id>', views.detail, name='detail'),
-    path('weather/', views.weather, name='weather')
+    path('weather/', views.weather, name='weather'),
+    path('map/', views.map, name="map"),
 ]

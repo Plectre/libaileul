@@ -471,6 +471,20 @@ th {
     width: 80vw;
 }
 
+.map {
+    display: flex;
+    margin-top: 10px;
+}
+
+.map iframe {
+    margin: auto;
+    border-radius: 20px;
+    width: 100vw;
+    height: 200px;
+    text-align: center;
+    overflow: hidden;
+}
+
 .footer {
     display: flex;
     height: 100px;
