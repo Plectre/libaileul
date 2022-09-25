@@ -23,7 +23,7 @@
             <img src='{{ article.image.url }}' alt="image {{article.title}}">
         </div>
         <div class="card-content">
-            <h5>{{ article.content | truncatechars:100}}</h5>
+            <h5>{{ article.content | truncatechars:250}}</h5>
         </div>
         <div class="btn-about">
             <a href="detail/{{ article.id }}">

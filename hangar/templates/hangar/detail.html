@@ -2,12 +2,13 @@
 {% block title%}{{ details.title }}{% endblock %}
 {% block content %}
 
-
+<div class="main-content">
 <div class="details-card">
     <div class="details-card-img">
         <img src='{{ details.image.url }}' alt="image {{details.title}}">
     </div>
     <h4 class="details-card-title">{{ details.title }}</h4>
     <h5 class="details-card-content">{{ details.content }}</h5>
+</div>
 </div>
 {% endblock content %}

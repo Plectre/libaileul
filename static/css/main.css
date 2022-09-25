@@ -204,7 +204,7 @@ table {
     flex-direction: column;
     width: 80vw;
     margin: auto;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .green-alert {
@@ -406,14 +406,17 @@ th {
 }
 
 /* CARD */
-.cards {}
 
 .card {
+    border-radius: 20px;
+    padding: 20px;
+    margin: 5px;
+    border:solid 1px cadetblue;
     overflow: hidden;
 }
 
-.details-card-img img {
-    width: 100%;
+.card-image image{
+    border-radius: 20px;
 }
 
 .card-title a {
@@ -422,17 +425,24 @@ th {
     padding: 0px 1em;
 }
 
+.details-card-img img {
+    width: 100%;
+}
+
 .card-content {
-    font-size: 1.5em;
+    color:gray;
+    padding: 10px;
+    margin: 5px;
 }
 
 .card-image img {
-    width: 100vw;
+    width: 100%;
+    border-radius: 20px;
 }
 
 .card-title {
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     font-size: 1em;
 }
 
@@ -448,15 +458,24 @@ th {
     color: gray;
     padding-bottom: 0.5em;
 }
-.btn-about input{
-    width: 200px;
-    height: 50px;
-    background-color: cadetblue;
-    opacity: 70%;
-    border: 0px;
-    border-radius: 10px;
+.btn-about {
+    float: right;
 }
 
+.btn-about input {
+    height: auto;
+    color: white;
+    background-color: cadetblue;
+    opacity: 90%;
+    border: 0px;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.btn-about input:hover{
+    opacity: 60%;
+    cursor: pointer;
+}
 /* LOCATION */
 .location-content {
     display: flex;
@@ -473,13 +492,24 @@ th {
 
 .map {
     display: flex;
+    flex-direction: column;
     margin-top: 10px;
 }
 
-.map iframe {
+.map-title  {
+    font-size: 2em;
+    padding: 0px 1em;
+}
+
+.map content {
+    padding: 10px;
+    margin: 5px;
+}
+
+iframe {
     margin: auto;
     border-radius: 20px;
-    width: 100vw;
+    width: 100%;
     height: 200px;
     text-align: center;
     overflow: hidden;
@@ -547,6 +577,7 @@ th {
     }
     .weather-display {
         flex-direction: column;
+        margin: 30px auto;
     }
 
     .weather-display-items ul {
@@ -565,7 +596,12 @@ th {
         opacity: 85%;
         border-radius: 10px;
     }
-
+    .card-content {
+        font-size: 1.5rem;
+    }
+    .btn-about input {
+        font-size: 1.5rem;
+    }
     .logbook-table {
         display: flex;
         flex-direction: column;
