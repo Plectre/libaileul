@@ -408,12 +408,19 @@ th {
 /* CARD */
 
 .card {
+    display: flex;
     border-radius: 20px;
+    flex-direction: column;
     padding: 20px;
     margin: 5px;
-    border:solid 1px cadetblue;
+    border: solid 1px cadetblue;
     overflow: hidden;
     flex: 1;
+}
+.card-image {
+    height: 33%;
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .card-image image{
@@ -468,7 +475,7 @@ th {
     color: white;
     background-color: cadetblue;
     opacity: 90%;
-    border: 0px;
+    border: none;
     border-radius: 10px;
     padding: 10px;
 }
@@ -607,11 +614,16 @@ iframe {
         border-radius: 10px;
     }
     .card-content {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
 
+    .btn-about {
+        margin-top: auto;
+        align-self: end;
+    }
+    
     .btn-about input {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
 
     .maps-footer {
