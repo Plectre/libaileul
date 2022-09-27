@@ -13,25 +13,29 @@
 
 
 {% include 'hangar/weather.html' %}
-<div class="main-content">
-    {% for article in articles %}
-    <div class="card">
-        <div class="card-title">
-            <h4><a href="detail/{{article.id}}">{{ article.title }}</a></h4>
+<div class="container">
+    <div class="main-content">
+        {% for article in articles %}
+        <div class="card">
+            <div class="card-title">
+                <h4><a href="detail/{{article.id}}">{{ article.title }}</a></h4>
+            </div>
+            <div class="card-image">
+                <img src='{{ article.image.url }}' alt="image {{article.title}}">
+            </div>
+            <div class="card-content">
+                <h5>{{ article.content | truncatechars:250}}</h5>
+            </div>
+            <div class="btn-about">
+                <a href="detail/{{ article.id }}">
+                <input type="submit" value="En savoir plus..."/>
+                </a>
+            </div>
         </div>
-        <div class="card-image">
-            <img src='{{ article.image.url }}' alt="image {{article.title}}">
-        </div>
-        <div class="card-content">
-            <h5>{{ article.content | truncatechars:250}}</h5>
-        </div>
-        <div class="btn-about">
-            <a href="detail/{{ article.id }}">
-            <input type="submit" value="En savoir plus..."/>
-            </a>
-        </div>
+        {% endfor %}
     </div>
-    {% endfor %}
-    {% include 'hangar/map.html' %}
+        <div class="maps-footer">
+            {% include 'hangar/map.html' %}
+        </div>
 </div>
     {% endblock content%}

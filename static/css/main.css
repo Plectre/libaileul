@@ -150,10 +150,10 @@ table {
 }
 
 .container {
+    margin: auto;
     display: flex;
-    width: 100vw;
+    width: 95%;
     flex-direction: column;
-    height: max-content;
 }
 
 .baniere {
@@ -202,7 +202,7 @@ table {
 .main-content {
     display: flex;
     flex-direction: column;
-    width: 80vw;
+    width: inherit;
     margin: auto;
     overflow: hidden;
 }
@@ -413,6 +413,7 @@ th {
     margin: 5px;
     border:solid 1px cadetblue;
     overflow: hidden;
+    flex: 1;
 }
 
 .card-image image{
@@ -561,10 +562,19 @@ iframe {
 /* ============================= En dessus de 800px ==================================*/
 @media only screen and (min-width: 800px) {
 
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: max-content;
+        width: 95vw;
+        margin: auto;
+    }
 
     .main-content {
-        width: 95vw;
+        flex-direction: row;
+        width: inherit;
     }
+
     .baniere {
         height: 500px;
     }
@@ -599,9 +609,15 @@ iframe {
     .card-content {
         font-size: 1.5rem;
     }
+
     .btn-about input {
         font-size: 1.5rem;
     }
+
+    .maps-footer {
+
+    }
+
     .logbook-table {
         display: flex;
         flex-direction: column;
