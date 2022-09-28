@@ -301,6 +301,16 @@ table {
     font-size: smaller;
     padding: 5px;
 }
+
+.map-content {
+    border: solid 1px;
+    border-radius: 20px;
+    color: cadetblue;
+}
+.map-footer {
+    width: inherit;
+    margin: auto;
+}
 /*====== Font Awsome =======================*/
 .fa-trash-can {
     color: black;
@@ -326,6 +336,7 @@ table {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: auto;
 }
 
 .logbook-table {
@@ -416,9 +427,15 @@ th {
     border: solid 1px cadetblue;
     overflow: hidden;
     flex: 1;
+    flex-basis: 30%;
+    background-color: whitesmoke;
 }
+
+.card:hover {
+
+}
+
 .card-image {
-    height: 33%;
     border-radius: 20px;
     overflow: hidden;
 }
@@ -451,7 +468,7 @@ th {
 .card-title {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    font-size: 1em;
+    font-size: 2em;
 }
 
 .card-body {
@@ -489,6 +506,8 @@ th {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin: 20px auto;
+    font-size: 2em;
 }
 
 .location-items {
@@ -570,15 +589,14 @@ iframe {
 @media only screen and (min-width: 800px) {
 
     .container {
-        display: flex;
-        flex-direction: column;
-        height: max-content;
-        width: 95vw;
+        width: 90%;
         margin: auto;
     }
 
     .main-content {
         flex-direction: row;
+        flex-basis: max-content;
+        flex-wrap: wrap;
         width: inherit;
     }
 

@@ -18,7 +18,7 @@
         {% for article in articles %}
         <div class="card">
             <div class="card-title">
-                <h4><a href="detail/{{article.id}}">{{ article.title }}</a></h4>
+                <h4>{{ article.title }}</h4>
             </div>
             <div class="card-image">
                 <img src='{{ article.image.url }}' alt="image {{article.title}}">
@@ -34,7 +34,7 @@
         </div>
         {% endfor %}
     </div>
-        <div class="maps-footer">
+        <div class="map-footer">
             {% include 'hangar/map.html' %}
         </div>
 </div>
