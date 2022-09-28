@@ -150,10 +150,10 @@ table {
 }
 
 .container {
+    margin: auto;
     display: flex;
-    width: 100vw;
+    width: 95%;
     flex-direction: column;
-    height: max-content;
 }
 
 .baniere {
@@ -202,7 +202,7 @@ table {
 .main-content {
     display: flex;
     flex-direction: column;
-    width: 80vw;
+    width: inherit;
     margin: auto;
     overflow: hidden;
 }
@@ -301,6 +301,16 @@ table {
     font-size: smaller;
     padding: 5px;
 }
+
+.map-content {
+    border: solid 1px;
+    border-radius: 20px;
+    color: cadetblue;
+}
+.map-footer {
+    width: inherit;
+    margin: auto;
+}
 /*====== Font Awsome =======================*/
 .fa-trash-can {
     color: black;
@@ -326,6 +336,7 @@ table {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: auto;
 }
 
 .logbook-table {
@@ -408,10 +419,24 @@ th {
 /* CARD */
 
 .card {
+    display: flex;
     border-radius: 20px;
+    flex-direction: column;
     padding: 20px;
     margin: 5px;
-    border:solid 1px cadetblue;
+    border: solid 1px cadetblue;
+    overflow: hidden;
+    flex: 1;
+    flex-basis: 30%;
+    background-color: whitesmoke;
+}
+
+.card:hover {
+
+}
+
+.card-image {
+    border-radius: 20px;
     overflow: hidden;
 }
 
@@ -443,7 +468,7 @@ th {
 .card-title {
     padding-top: 1rem;
     padding-bottom: 1rem;
-    font-size: 1em;
+    font-size: 2em;
 }
 
 .card-body {
@@ -467,7 +492,7 @@ th {
     color: white;
     background-color: cadetblue;
     opacity: 90%;
-    border: 0px;
+    border: none;
     border-radius: 10px;
     padding: 10px;
 }
@@ -481,6 +506,8 @@ th {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin: 20px auto;
+    font-size: 2em;
 }
 
 .location-items {
@@ -561,10 +588,18 @@ iframe {
 /* ============================= En dessus de 800px ==================================*/
 @media only screen and (min-width: 800px) {
 
+    .container {
+        width: 90%;
+        margin: auto;
+    }
 
     .main-content {
-        width: 95vw;
+        flex-direction: row;
+        flex-basis: max-content;
+        flex-wrap: wrap;
+        width: inherit;
     }
+
     .baniere {
         height: 500px;
     }
@@ -597,11 +632,22 @@ iframe {
         border-radius: 10px;
     }
     .card-content {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
+
+    .btn-about {
+        margin-top: auto;
+        align-self: end;
+    }
+    
     .btn-about input {
-        font-size: 1.5rem;
+        font-size: 1rem;
     }
+
+    .maps-footer {
+
+    }
+
     .logbook-table {
         display: flex;
         flex-direction: column;
