@@ -16,7 +16,6 @@ def index(request):
 def detail(request, id):
     articles = Articles
     details = articles.objects.get(pk=id)
-    print(f"{details}")
     context = {
         'details': details,
     }
