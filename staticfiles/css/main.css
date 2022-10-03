@@ -416,7 +416,7 @@ th {
     background-color: rgba(107, 130, 128, 0.450);
 }
 
-/* CARD */
+/********************** CARD ************************************/
 
 .card {
     display: flex;
@@ -436,6 +436,7 @@ th {
 }
 
 .card-image {
+    flex: 1;
     border-radius: 20px;
     overflow: hidden;
 }
@@ -455,6 +456,7 @@ th {
 }
 
 .card-content {
+    flex: 1;
     color:gray;
     padding: 10px;
     margin: 5px;
@@ -585,8 +587,8 @@ iframe {
     cursor: pointer;
 }
 
-/* ============================= En dessus de 800px ==================================*/
-@media only screen and (min-width: 800px) {
+/* ============================= En dessus de 900px ==================================*/
+@media only screen and (min-width: 900px) {
 
     .container {
         width: 90%;

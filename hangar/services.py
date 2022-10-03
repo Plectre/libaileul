@@ -49,6 +49,7 @@ def format_result(w):
     sunrise = convert_time(w['sys']['sunrise'])
     sunset = convert_time(w['sys']['sunset'])
     dt = convert_time(w['dt'])
+    dt = "{0}h{1}".format(dt[0:2], dt[3:5])
 
     result = {
                 'heure': str(dt),
@@ -61,3 +62,6 @@ def format_result(w):
                 'sunset': str(sunset),
             }
     return result
+
+def sort_time():
+    print("sort_time")
